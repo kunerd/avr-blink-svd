@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<device schemaVersion="1.1"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+
+  <vendor>Microchip AVR</vendor>                                       <!-- device vendor name -->
+  <vendorID>AVR</vendorID>                                        <!-- device vendor short name -->
+  <name>ATtiny2313</name>                                        <!-- name of part-->
+  <series>tinyAVR</series>                                         <!-- device series the device belongs to -->
+  <version>1.0</version>                                          <!-- version of this description, adding CMSIS-SVD 1.1 tags -->
+  <description> This needs to be filled. </description>
+  <cpu>                                                           <!-- details about the cpu embedded in the device -->
+    <name>other</name>
+    <revision>r1p0</revision> <!-- ? does not really fit for AVRs -->
+    <endian>little</endian> <!-- ? -->
+    <mpuPresent>false</mpuPresent>
+    <fpuPresent>false</fpuPresent>
+    <nvicPrioBits>3</nvicPrioBits> <!-- ??? -->
+    <vendorSystickConfig>false</vendorSystickConfig> <!-- ??? -->
+  </cpu>
+
+  <addressUnitBits>8</addressUnitBits>                            <!-- fixed -->
+  <width>8</width>                                               <!-- fixed -->
+  <!-- default settings implicitly inherited by subsequent sections -->
+  <size>8</size>                                                 <!-- fixed ??? -->
+  <access>read-write</access>                                     <!-- default access permission for all subsequent registers -->
+  <resetValue>0x00</resetValue>                             <!-- by default all bits of the registers are initialized to 0 on reset -->
+  <resetMask>0xFF</resetMask>
+
+  <peripherals>
+    <peripheral>
+      <name>PORTB</name>
+      <description>I/O Port</description>
+      <groupName>PORT</groupName>
+      <baseAddress>0x00</baseAddress>
+      <!-- <addressBlock>
+        <offset>0x0</offset>
+        <size>0x400</size>
+        <usage>registers</usage>
+      </addressBlock> -->
+      <registers>
+        <register>
+          <name>PORTB</name>
+          <displayName>PORTB</displayName>
+          <description>Port B Data Register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>1</size>
+          <access>read-write</access>
+          <resetValue>0x00</resetValue>
+        </register>
+
+        <register>  
+          <name>DDRB</name>
+          <displayName>DDRB</displayName>
+          <description>Port B Data Direction Register</description>
+          <addressOffset>0x37</addressOffset>
+          <size>1</size>
+          <access>read-write</access>
+          <resetValue>0x00</resetValue>
+        </register>
+
+        <register>  
+          <name>PINB</name>
+          <displayName>PINB</displayName>
+          <description>Port B Input Pins</description>
+          <addressOffset>0x36</addressOffset>
+          <size>1</size>
+          <access>read-write</access>
+          <resetValue>0x00</resetValue>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

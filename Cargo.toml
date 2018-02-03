@@ -1,0 +1,8 @@
+[package]
+name = "attiny2313"
+version = "0.1.0"
+authors = ["Hendrik Kunert <hendrik.kunert@henku.de>"]
+
+[dependencies]
+#bare-metal = "0.1.1"
+vcell = "0.1.0"
