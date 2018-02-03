@@ -6,13 +6,12 @@ extern crate attiny2313;
 
 #[no_mangle]
 pub extern "C" fn main() {
-    // let peripherals = unsafe { attiny2313::Peripherals::steal() };
     let peripherals = unsafe { attiny2313::Peripherals::steal() };
 
     peripherals
         .PORTB
         .ddrb
-        .write(|w| unsafe { w.bits(0xFF) });
+        .write(|w| unsafe { w.bits(0xF0) });
 
     loop {
         // Set all pins on PORTB to high.

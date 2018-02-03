@@ -32,19 +32,19 @@
       <name>PORTB</name>
       <description>I/O Port</description>
       <groupName>PORT</groupName>
-      <baseAddress>0x00</baseAddress>
-      <!-- <addressBlock>
-        <offset>0x0</offset>
-        <size>0x400</size>
+      <baseAddress>0x36</baseAddress>
+      <addressBlock>
+        <offset>0x00</offset>
+        <size>0x18</size>
         <usage>registers</usage>
-      </addressBlock> -->
+      </addressBlock>
       <registers>
         <register>
           <name>PORTB</name>
           <displayName>PORTB</displayName>
           <description>Port B Data Register</description>
-          <addressOffset>0x38</addressOffset>
-          <size>1</size>
+          <addressOffset>0x02</addressOffset>
+          <size>8</size>
           <access>read-write</access>
           <resetValue>0x00</resetValue>
         </register>
@@ -53,8 +53,8 @@
           <name>DDRB</name>
           <displayName>DDRB</displayName>
           <description>Port B Data Direction Register</description>
-          <addressOffset>0x37</addressOffset>
-          <size>1</size>
+          <addressOffset>0x01</addressOffset>
+          <size>8</size>
           <access>read-write</access>
           <resetValue>0x00</resetValue>
         </register>
@@ -63,8 +63,8 @@
           <name>PINB</name>
           <displayName>PINB</displayName>
           <description>Port B Input Pins</description>
-          <addressOffset>0x36</addressOffset>
-          <size>1</size>
+          <addressOffset>0x00</addressOffset>
+          <size>8</size>
           <access>read-write</access>
           <resetValue>0x00</resetValue>
         </register>

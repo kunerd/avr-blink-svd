@@ -1,5 +1,5 @@
 # ! [ doc = "Peripheral access API for ATTINY2313 microcontrollers (generated using svd2rust v0.12.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.12.0/svd2rust/#peripheral-api" ] # ! [ allow ( private_no_mangle_statics ) ] # ! [ deny ( missing_docs ) ] # ! [ deny ( warnings ) ] # ! [ allow ( non_camel_case_types ) ] # ! [ feature ( const_fn ) ] # ! [ no_std ]
-//extern crate bare_metal ;
+// extern crate bare_metal ;
 extern crate vcell;
 use core::ops::Deref;
 use core::marker::PhantomData;
@@ -13,7 +13,7 @@ unsafe impl Send for PORTB {}
 impl PORTB {
     #[doc = r" Returns a pointer to the register block"]
     pub fn ptr() -> *const portb::RegisterBlock {
-        0 as *const _
+        0x36 as *const _
     }
 }
 impl Deref for PORTB {
@@ -28,12 +28,9 @@ pub mod portb {
     #[doc = r" Register block"]
     #[repr(C)]
     pub struct RegisterBlock {
-        _reserved0: [u8; 54usize],
-        #[doc = "0x36 - Port B Input Pins"] pub pinb: PINB,
-        _reserved1: [u8; 1usize],
-        #[doc = "0x37 - Port B Data Direction Register"] pub ddrb: DDRB,
-        _reserved2: [u8; 1usize],
-        #[doc = "0x38 - Port B Data Register"] pub portb: PORTB,
+        #[doc = "0x00 - Port B Input Pins"] pub pinb: PINB,
+        #[doc = "0x01 - Port B Data Direction Register"] pub ddrb: DDRB,
+        #[doc = "0x02 - Port B Data Register"] pub portb: PORTB,
     }
     #[doc = "Port B Data Register"]
     pub struct PORTB {
